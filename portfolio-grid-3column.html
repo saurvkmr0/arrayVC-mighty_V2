@@ -495,13 +495,14 @@
 
     <!-- Scripts style two -->
     <!-- rts bread crumba rea start -->
-    <div class="rts-breadcrumb-area bg_image">
+     
+    <!-- <div class="rts-breadcrumb-area bg_image">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="baread-crumb-main-wrapper pt--100">
                         <div class="inner">
-                            <!-- <span class="works">Our Selected Works</span> -->
+                            
                             <h1 class="title rts_hero__title">Our Investments</h1>
                             <span class="bg-text">Array VC</span>
                         </div>
@@ -509,7 +510,82 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <!-- custom banner starts -->
+    <div class="rts-breadcrumb-area" style="text-align: center; background-color: white; position: relative;">
+        <div class="array-vc" style="position: relative; color: lightgray;">Array VC</div>
+        <div class="page-name">Our Investments</div>
     </div>
+    
+    <style>
+        .array-vc {
+            font-size: 200px;
+        }
+    
+        .page-name {
+            position: absolute;
+            z-index: 1;
+            color: black;
+            top: 340px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            font-size: 100px;
+            font-weight: 500;
+            width:100%;
+        }
+
+        @media (max-width: 1200px) { 
+            .array-vc {
+                font-size: 150px;
+            }
+            .page-name {
+                font-size: 80px;
+            }
+        }
+    
+        @media (max-width: 992px) { 
+            .array-vc {
+                font-size: 120px;
+            }
+            .page-name {
+                font-size: 55px;
+            }
+        }
+    
+        @media (max-width: 768px) { 
+            .array-vc {
+                font-size: 100px;
+                padding:50px 0;
+            }
+            .page-name {
+                font-size: 60px;
+                top: 240px;
+            }
+        }
+    
+        @media (max-width: 576px) { 
+            .array-vc {
+                font-size: 60px;
+            }
+            .page-name {
+                font-size: 35px;
+                top: 200px;
+            }
+        }
+    
+        @media (max-width: 360px) { 
+            .array-vc {
+                font-size: 40px;
+            }
+            .page-name {
+                font-size: 30px;
+            }
+        }
+    </style>
+    <!-- custom banner ends -->
+
+
     <!-- rts bread crumba rea end -->
     <!-- Scripts style two End -->
 
