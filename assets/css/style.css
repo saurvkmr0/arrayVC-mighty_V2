@@ -15478,12 +15478,18 @@ header.header-four .nav-area .navbar-nav-1 .menu-item .mega-menu-01.sub-menu .si
 
 /* elements */
 .banner-bg-1 {
-  background-image: url(../images/banner/bg-shape.png);
+  /* background-image: url(../images/banner/bg-shape.png); */
   background-position: center;
   background-repeat: repeat;
   height: 1080px;
   background-color: #0E0E0E;
 }
+
+
+
+
+
+
 
 .banner-one-wrapper .title {
   color: #fff;
