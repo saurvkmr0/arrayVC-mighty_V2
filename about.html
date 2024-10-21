@@ -830,63 +830,113 @@
         <div style="margin-top: 60px;">
             <h2 style="color:black; text-align: center; " >DevOps Team</h2>
             
-            <div  class="devops">
-
-                <div style="background-color:#1e2835; width:320px; padding:40px; border-radius:20px;">
-                    <div>
-                      <div style="text-align:left;">
-                        <h5 class="devopsname" style="margin:0;  font-weight:bold; color:#fff;">
-                            Alex
-                        </h5>
-                        <p
-                          style=" color:#4e4d4d; font-weight: 700; padding:2px 0px; border-radius:5px; width:auto; display:inline-block; margin:8px 0;"
-                        >
-                        Cloud DevOps Engineer
-                        </p>
-                        <p style="margin:8px 0; color:#b0b0b0;">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
-                      </div>
-                    </div>
+            <div style="display:flex; gap: 10px; margin:0 10px; font-size: 20px; justify-content: center; flex-wrap: wrap;">
+                <!-- Buttons for filtering -->
+                <button onclick="filterCards('all', this)" class="filter-btn selected" style="font-weight: 600; width: fit-content;">All</button>
+                <button onclick="filterCards('type1', this)" class="filter-btn" style="font-weight: 600; width: fit-content;">Cloud</button>
+                <button onclick="filterCards('type2', this)" class="filter-btn" style="font-weight: 600; width: fit-content;">Platform</button>
+                <button onclick="filterCards('type3', this)" class="filter-btn" style="font-weight: 600; width: fit-content;">DevOps</button>
+              </div>
+              
+              <div class="devops">
+                <!-- Type 1 Card -->
+                <div class="card type1" style="background-color:#1e2835; width:320px; padding:40px; border-radius:20px;">
+                  <div style="text-align:left;">
+                    <h5 class="devopsname" style="margin:0; font-weight:bold; color:#fff;">Alex</h5>
+                    <p style="background-color: white; color:#4e4d4d; font-weight: 700; padding:2px 5px; border-radius:5px; width:auto; display:inline-block; margin:8px 0;">
+                      Cloud DevOps Engineer
+                    </p>
+                    <p style="color:#29c3f2; font-weight: 700; margin-bottom: 0; font-size: 24px;">@ Dyneti</p>
+                    <p style="margin:8px 0; color:#b0b0b0;">
+                      I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.
+                    </p>
+                  </div>
                 </div>
-
-                <div style="background-color:#1e2835; width:320px; padding:40px; border-radius:20px;">
-                    <div>
-                      <div style="text-align:left;">
-                        <h5 class="devopsname" style="margin:0;  font-weight:bold; color:#fff;">
-                            Marry
-                        </h5>
-                        <p
-                          style=" color:#4e4d4d; font-weight: 700; padding:2px 0px; border-radius:5px; width:auto; display:inline-block; margin:8px 0;"
-                        >
-                        Platform Engineer
-                        </p>
-                        <p style="margin:8px 0; color:#b0b0b0;">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
-                      </div>
-                    </div>
+              
+                <!-- Type 2 Card -->
+                <div class="card type2" style="background-color:#1e2835; width:320px; padding:40px; border-radius:20px;">
+                  <div style="text-align:left;">
+                    <h5 class="devopsname" style="margin:0; font-weight:bold; color:#fff;">Marry</h5>
+                    <p style="background-color: white; color:#4e4d4d; font-weight: 700; padding:2px 5px; border-radius:5px; width:auto; display:inline-block; margin:8px 0;">
+                      Platform Engineer
+                    </p>
+                    <p style="color:#29c3f2; font-weight: 700; margin-bottom: 0; font-size: 24px;">@ Blendid</p>
+                    <p style="margin:8px 0; color:#b0b0b0;">
+                      I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.
+                    </p>
+                  </div>
                 </div>
-
-                <div style="background-color:#1e2835; width:320px; padding:40px; border-radius:20px;">
-                    <div>
-                      <div style="text-align:left;">
-                        <h5 class="devopsname" style="margin:0;  font-weight:bold; color:#fff;">
-                            Angela
-                        </h5>
-                        <p
-                          style=" color:#4e4d4d; font-weight: 700; padding:2px 0px; border-radius:5px; width:auto; display:inline-block; margin:8px 0;"
-                        >
-                        DevOps
-                        </p>
-                        <p style="margin:8px 0; color:#b0b0b0;">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
-                      </div>
-                    </div>
+              
+                <!-- Type 3 Card -->
+                <div class="card type3" style="background-color:#1e2835; width:320px; padding:40px; border-radius:20px;">
+                  <div style="text-align:left;">
+                    <h5 class="devopsname" style="margin:0; font-weight:bold; color:#fff;">Angela</h5>
+                    <p style="background-color: white; color:#4e4d4d; font-weight: 700; padding:2px 5px; border-radius:5px; width:auto; display:inline-block; margin:8px 0;">
+                      DevOps
+                    </p>
+                    <p style="color:#29c3f2; font-weight: 700; margin-bottom: 0; font-size: 24px;">@ Almanac</p>
+                    <p style="margin:8px 0; color:#b0b0b0;">
+                      I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.
+                    </p>
+                  </div>
                 </div>
-
-
-            </div>
+              </div>
+              
+              <!-- CSS to style buttons -->
+              <style>
+                .filter-btn {
+                  border: 1px solid gray;
+                  background-color: white;
+                  color: gray;
+                  padding: 10px 20px;
+                  cursor: pointer;
+                  border-radius: 5px;
+                  transition: all 0.3s;
+                }
+                
+                .filter-btn.selected {
+                  background-color: rgb(0, 0, 0);
+                  color: white;
+                }
+                
+                .filter-btn:hover {
+                  background-color: black;
+                  color:white;
+                }
+              </style>
+              
+              <!-- JavaScript for filtering and button style change -->
+              <script>
+                function filterCards(type, btn) {
+                  var cards = document.querySelectorAll('.card');
+                  
+                  cards.forEach(function(card) {
+                    if (type === 'all') {
+                      card.style.display = 'block'; // Show all cards
+                    } else if (card.classList.contains(type)) {
+                      card.style.display = 'block'; // Show specific type cards
+                    } else {
+                      card.style.display = 'none'; // Hide other cards
+                    }
+                  });
+                  
+                  // Remove selected class from all buttons
+                  var buttons = document.querySelectorAll('.filter-btn');
+                  buttons.forEach(function(button) {
+                    button.classList.remove('selected');
+                  });
+                  
+                  // Add selected class to the clicked button
+                  btn.classList.add('selected');
+                }
+              </script>
+              
+              
           
         </div>
         <style>
             .devopsname{
-                font-size:60px;
+                font-size:40px;
             }
             .devops{
                 margin:40px 120px;
@@ -903,7 +953,7 @@
                    
                 }
                 .devopsname{
-                    font-size: 40px;
+                    font-size: 30px;
                 }
             }
         </style>
