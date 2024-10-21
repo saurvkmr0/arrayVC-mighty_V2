@@ -254,14 +254,14 @@
           gsap.registerPlugin(ScrollTrigger);
           let tl2 = gsap.timeline();
           tl2.to(".scrollingText-two", {
-            x: 1000,
-            duration: 50,
+            x: 1200,
+            duration: 100,
             repeat: -1,
             ease: 'linear'
           })
           let tl = gsap.timeline();
           tl.to('.scrollingText-two', {
-            xPercent: 5,
+            xPercent: 3,
             scrollTrigger: {
               trigger: ".scrollingText-two",
               scrub: 1

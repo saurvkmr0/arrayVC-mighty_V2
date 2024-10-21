@@ -14283,7 +14283,9 @@ xclip
   opacity: 0;
 }
 
-.rts-cursor {
+
+/* pointer animation removed form here */
+/* .rts-cursor {
   position: fixed;
   left: 0;
   top: 0;
@@ -14297,7 +14299,7 @@ xclip
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
-}
+} 
 
 @media (max-width: 1040px) {
   .rts-cursor {
@@ -14474,7 +14476,7 @@ xclip
   -o-transition: transform 0.08s ease-out, opacity 0.2s ease;
   transition: transform 0.08s ease-out, opacity 0.2s ease;
   transition: transform 0.08s ease-out, opacity 0.2s ease, -webkit-transform 0.08s ease-out;
-}
+}*/
 
 .h-100vh {
   height: 100vh;
