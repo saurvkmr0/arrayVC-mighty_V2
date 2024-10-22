@@ -534,7 +534,7 @@
                             <div class="banner-one-wrapper mt--80 mt_sm--0">
                                 <h1 class="title rts_hero__title" style="color:black; font-weight: 900 !important;" >
                                     Empowering With<br>
-                                    <span class="border-bottom-1" style="color:black" >Ed Tech</span> <br>
+                                    <!-- <span class="border-bottom-1" style="color:black" >Ed Tech</span> <br> -->
                                     <!-- <div class="text-container">
                                         <div class="fade-text">Ed Tech</div>
                                         <div class="fade-text">B2B SaaS</div>
@@ -542,6 +542,53 @@
                                         <div class="fade-text">AI</div>
                                         <div class="fade-text">Future</div>
                                     </div> -->
+                                    <div class="text-container">
+                                        <div class="fade-text active">Future</div>  
+                                    </div>
+                                    <style>
+                                        .text-container {
+                                            position: relative;
+                                            width: fit-content;
+                                            height: 40px;
+                                            overflow: hidden;
+                                        }
+                                
+                                        .fade-text {
+                                            opacity: 0;
+                                            transition: opacity 1s ease-in-out; /* Smooth fade in/out over 1 second */
+                                            font-size: 24px;
+                                        }
+                                
+                                        .fade-text.active {
+                                            opacity: 1;
+                                        }
+                                    </style>
+                                    <script>
+                                        const textElement = document.querySelector('.fade-text');
+                                        const texts = ["Ed Tech", "B2B SaaS", "Cybersecurity", "AI", "Future"];
+                                        let currentIndex = 0;
+                                        const displayTime = 2000; // Time each text stays fully visible (in milliseconds)
+                                        const transitionTime = 1000; // Time for the fade in/out (in milliseconds)
+                                
+                                        function cycleTexts() {
+                                            // Fade out current text
+                                            textElement.classList.remove('active');
+                                
+                                            setTimeout(() => {
+                                                // Update text content
+                                                currentIndex = (currentIndex + 1) % texts.length;
+                                                textElement.textContent = texts[currentIndex];
+                                
+                                                // Fade in new text
+                                                textElement.classList.add('active');
+                                            }, transitionTime); // Delay fade in until after fade out completes
+                                        }
+                                
+                                        // Run the cycleTexts function in a loop, considering both display and transition times
+                                        setInterval(cycleTexts, displayTime + transitionTime);
+                                    </script>
+                                      
+                                      
                                     Solutions
                                 </h1>
                                 <div class="">
@@ -634,24 +681,24 @@
                         <div class="col-lg-5">
                             <div class="left-main-about-inner">
                                 <!-- <img src="assets/images/about/02.png" alt="about"> -->
-                                <img src="assets/images/product/85.jpg" alt="about">
-                                <div class="shape-about-two">
+                                <!-- <img src="assets/images/product/85.jpg" alt="about"> -->
+                                <!-- <div class="shape-about-two"> -->
                                     <!-- <img src="assets/images/about/06.png" alt="about"> -->
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </div>
-                        <div class="col-lg-7 pl--60 pl_sm--15 pt_md--50 pt_sm--30">
+                        <div class="col-lg-7 pl--60 pl_sm--15 pt_md--50 pt_sm--30" style="width:100%">
                             <!-- about right area start -->
                             <div class="about-area-right-start">
                                 <div class="inner-about-wrapper">
                                     <h2 class="title quote">Innovative Solutions
                                         for Your Business</h2>
-                                    <p class="disc rts-text-anim">
+                                    <p class="disc rts-text-anim" style="font-size: 24px; font-weight:600;">
                                         Array Ventures invests in early-stage enterprise companies building transformative technologies.
                                     </p>
                                     <div class="progress-main-wrapper">
                                         <!-- ingle progress start -->
-                                        <div class="single-progress-area-one mb--40">
+                                        <!-- <div class="single-progress-area-one mb--40">
                                             <div class="progress">
                                                 <div class="progress-bar wow fadeInLeft bg--primary" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
@@ -663,10 +710,10 @@
                                                     90%
                                                 </span>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- ingle progress start -->
                                         <!-- ingle progress start -->
-                                        <div class="single-progress-area-one">
+                                        <!-- <div class="single-progress-area-one">
                                             <div class="progress">
                                                 <div class="progress-bar wow fadeInLeft bg--primary" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
@@ -678,7 +725,7 @@
                                                     85%
                                                 </span>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- ingle progress start -->
                                     </div>
                                     <div class="btn--area-left mt--50" style="width: fit-content;">
@@ -1444,7 +1491,7 @@
                                         <img src="assets/images/cta/01.png" alt="cta-main-wrapper">
                                     </div>
                                     <div class="cta-mid-area">
-                                        <h3 class="title">Lat’s make <span>something <br>
+                                        <h3 class="title">Let’s make <span>something <br>
                                                 great</span> together</h3>
                                         <p class="disc">
                                             we are dedicated to helping businesses achieve <br> their goals through

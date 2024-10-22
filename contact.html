@@ -527,7 +527,7 @@
 
 
     <!-- custom banner starts -->
-    <div class="rts-breadcrumb-area" style="text-align: center; background-color: white; position: relative;">
+    <!-- <div class="rts-breadcrumb-area" style="text-align: center; background-color: white; position: relative;">
         <div class="array-vc" style="position: relative; color: lightgray;">Array VC</div>
         <div class="page-name">Apply Now</div>
     </div>
@@ -596,7 +596,33 @@
                 font-size: 30px;
             }
         }
-    </style>
+    </style> -->
+    <div class="rts-about-area rts-section-gap mt--10" style="background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="page-name">Contact</div>
+                <div style="height: 4px; background-color: black; width: 400px; border-radius: 5px; margin:10px 0;"></div>
+                    <style>
+                       .page-name{
+                        color:black;
+                        font-size: 120px;
+                        margin:60px 0;
+                        font-weight: 700;
+                       } 
+                       @media (max-width:800px) {
+                            .page-name{
+                                font-size: 100px;
+                            }
+                       }
+                       @media (max-width:525px) {
+                            .page-name{
+                                font-size: 50px;
+                            }
+                       }
+                    </style>
+            </div>
+        </div>
+    </div>   
     <!-- custom banner ends -->
 
 
@@ -844,7 +870,7 @@
 
 
     <!-- dark light switcher start-->
-    <div class="modal-sidebar-scroll rts-dark-light">
+    <div class="modal-sidebar-scroll rts-dark-light" style="display: none;">
         <ul>
             <li class="go-dark-w"><span>Dark</span><i class="rts-go-dark fal fa-moon"></i></li>
             <li class="go-light-w"><span>Light</span><i class="rts-go-light fa-light fa-brightness"></i></li>
