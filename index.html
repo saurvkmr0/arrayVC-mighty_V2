@@ -533,7 +533,7 @@
                         <div class="col-lg-9">
                             <div class="banner-one-wrapper mt--80 mt_sm--0">
                                 <h1 class="title rts_hero__title" style="color:black; font-weight: 900 !important;" >
-                                    Empowering With<br>
+                                    Empowering<br>
                                     <!-- <span class="border-bottom-1" style="color:black" >Ed Tech</span> <br> -->
                                     <!-- <div class="text-container">
                                         <div class="fade-text">Ed Tech</div>
@@ -542,51 +542,87 @@
                                         <div class="fade-text">AI</div>
                                         <div class="fade-text">Future</div>
                                     </div> -->
+                                
                                     <div class="text-container">
-                                        <div class="fade-text active">Future</div>  
+                                        <div class="fade-text"></div>  
                                     </div>
+                                    
                                     <style>
                                         .text-container {
                                             position: relative;
                                             width: fit-content;
                                             height: 40px;
                                             overflow: hidden;
+                                            display: inline-block; /* Keep text and cursor together */
                                         }
-                                
+                                    
                                         .fade-text {
-                                            opacity: 0;
-                                            transition: opacity 1s ease-in-out; /* Smooth fade in/out over 1 second */
                                             font-size: 24px;
+                                            white-space: nowrap; /* Prevent text from wrapping */
+                                            display: inline-block;
                                         }
-                                
-                                        .fade-text.active {
-                                            opacity: 1;
+                                    
+                                        /* Blinking cursor */
+                                        .fade-text::after {
+                                            content: '|'; /* Add the pipe cursor */
+                                            display: inline-block;
+                                            margin-left: 2px;
+                                            animation: blink 1s infinite; /* Blink animation */
+                                        }
+                                    
+                                        @keyframes blink {
+                                            0% { opacity: 1; }
+                                            50% { opacity: 0; }
+                                            100% { opacity: 1; }
                                         }
                                     </style>
+                                    
                                     <script>
                                         const textElement = document.querySelector('.fade-text');
                                         const texts = ["Ed Tech", "B2B SaaS", "Cybersecurity", "AI", "Future"];
                                         let currentIndex = 0;
-                                        const displayTime = 2000; // Time each text stays fully visible (in milliseconds)
-                                        const transitionTime = 1000; // Time for the fade in/out (in milliseconds)
-                                
-                                        function cycleTexts() {
-                                            // Fade out current text
-                                            textElement.classList.remove('active');
-                                
-                                            setTimeout(() => {
-                                                // Update text content
-                                                currentIndex = (currentIndex + 1) % texts.length;
-                                                textElement.textContent = texts[currentIndex];
-                                
-                                                // Fade in new text
-                                                textElement.classList.add('active');
-                                            }, transitionTime); // Delay fade in until after fade out completes
+                                        let letterIndex = 0;
+                                        const typingSpeed = 150;
+                                        const deletingSpeed = 100;
+                                        const displayTime = 2000; 
+                                    
+                                        function typeWriter() {
+                                            const currentText = texts[currentIndex] + "|";  
+
+                                            if (letterIndex < currentText.length) {
+                                                textElement.textContent = currentText.slice(0, letterIndex + 1);
+                                                letterIndex++;
+                                                setTimeout(typeWriter, typingSpeed);
+                                            } 
+                                            
+                                            else if (letterIndex === currentText.length) {
+                                                setTimeout(deleteText, displayTime); 
+                                            }
                                         }
-                                
-                                        // Run the cycleTexts function in a loop, considering both display and transition times
-                                        setInterval(cycleTexts, displayTime + transitionTime);
+                                    
+                                        function deleteText() {
+                                            const currentText = texts[currentIndex] + "|";  
+                                    
+                                            if (letterIndex > 0) {
+                                                textElement.textContent = currentText.slice(0, letterIndex);
+                                                letterIndex--;
+                                                setTimeout(deleteText, deletingSpeed);
+                                            } 
+                                            
+                                            else {
+                                                currentIndex = (currentIndex + 1) % texts.length; 
+                                                letterIndex = 0; 
+                                                setTimeout(typeWriter, typingSpeed);
+                                            }
+                                        }
+                                    
+                                        typeWriter();
                                     </script>
+                                    
+                                    
+                                    
+                                    
+                                    
                                       
                                       
                                     Solutions
@@ -667,10 +703,10 @@
                     <div class="text-split-wrap-about scrolltext-wrapper">
                         <div class="text-split scrollingText-two">
                             <h2 class="title">
-                                <span>Cybersecurity</span>
-                                <span style="color: transparent; -webkit-text-stroke: 1px gray;"> B2B SaaS </span>
-                                <span>Ed Tech </span>
-                                <span style="color: transparent; -webkit-text-stroke: 1px black;">Future </span>
+                                <span>We Bring</span>
+                                <span style="color: transparent; -webkit-text-stroke: 1px gray;"> The 2nd </span>
+                                <span>Wave Of </span>
+                                <span style="color: transparent; -webkit-text-stroke: 1px black;">Customers </span>
                             </h2>
                         </div>
                     </div>
